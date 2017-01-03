@@ -15,9 +15,9 @@ public class BaseWebAdapter extends WebMvcConfigurerAdapter{
 	
 	@Bean   //注册druid
 	@Order //使用注解方式使bean的加载顺序得到控制(value=1)值越小，越先被加载。
-	public ServletRegistrationBean statViewServlet() {
+	public ServletRegistrationBean statViewServlet() {    
 		StatViewServlet servlet = new StatViewServlet();
-		ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/druid/*");
+		ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/druid/*");//context.embedded.ServletRegistrationBean -- 1.3.5未失效    1.4.2失效
 		return bean;
 	}
 	
