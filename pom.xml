@@ -23,6 +23,9 @@
 			<properties>
 				<profiles.active>dev</profiles.active>
 			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 		</profile>
 
 		<profile>
@@ -31,9 +34,6 @@
 			<properties>
 				<profiles.active>uat</profiles.active>
 			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 		</profile>
 		<profile>
 			<!-- PROD environment -->

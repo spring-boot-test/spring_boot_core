@@ -13,13 +13,13 @@ import com.alibaba.druid.support.http.StatViewServlet;
 
 public class BaseWebAdapter extends WebMvcConfigurerAdapter{
 	
-	@Bean   //注册druid
-	@Order //使用注解方式使bean的加载顺序得到控制(value=1)值越小，越先被加载。
-	public ServletRegistrationBean statViewServlet() {    
-		StatViewServlet servlet = new StatViewServlet();
-		ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/druid/*");//context.embedded.ServletRegistrationBean -- 1.3.5未失效    1.4.2失效
-		return bean;
-	}
+//	@Bean   //注册druid
+//	@Order //使用注解方式使bean的加载顺序得到控制(value=1)值越小，越先被加载。
+//	public ServletRegistrationBean statViewServlet() {    
+//		StatViewServlet servlet = new StatViewServlet();
+//		ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/druid/*");//context.embedded.ServletRegistrationBean -- 1.3.5未失效    1.4.2失效
+//		return bean;
+//	}
 	
 	//开启CORS跨域支持  
 	@Bean
@@ -33,13 +33,12 @@ public class BaseWebAdapter extends WebMvcConfigurerAdapter{
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
-	
+
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**").allowedHeaders("*").allowedMethods("*").allowedOrigins("*");
 	}
 	
-	//解决分页问题
 //	@Override
 //	public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
 //		//super.extendMessageConverters(converters);
