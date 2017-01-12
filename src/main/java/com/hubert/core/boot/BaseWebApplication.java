@@ -31,12 +31,13 @@ public class BaseWebApplication extends BaseAplication {
 		app.setDefaultProperties(props);
 		app.setEnvironment(environment);
 		Set<Object> sources = new HashSet<Object>();
-//		sources.add("classpath:spring/spring-context-ds.xml");
+		sources.add("classpath:spring/spring-context-ds.xml");
+//		sources.add("classpath:spring/spring-context-druid.xml");//未来可以启用监控，调优连接池
 //		sources.add("classpath:spring/spring-context-bpm.xml");
 //		sources.add("classpath:spring/spring-context-cache.xml");
 //		sources.add("classpath:spring/spring-context-shiro.xml");
 //		sources.add("classpath:spring/spring-context-task.xml");
-		// sources.add("classpath:spring/spring-context-druid.xml");//未来可以启用监控，调优连接池
+		
 		app.setSources(sources);
 		app.run(args);
 	}
