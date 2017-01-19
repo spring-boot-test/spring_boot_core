@@ -126,9 +126,28 @@
 			<version>3.0</version>
 		</dependency>
 
+		<!--分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+		<!-- 控制台输出sql日志框架 -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+
 
 	</dependencies>
 
+	<!-- 打包到 置地maven 私服 <distributionManagement> <repository> <id>crland.maven.rep</id> 
+		<name>Crland Releases Repository</name> <url>http://10.72.1.137:8081/nexus/content/repositories/releases/</url> 
+		</repository> <snapshotRepository> <id>crland.maven.rep</id> <name>Crland 
+		Snapshot Repository</name> <url>http://10.72.1.137:8081/nexus/content/repositories/snapshots/</url> 
+		</snapshotRepository> </distributionManagement> -->
 	<build>
 		<resources>
 			<resource>
