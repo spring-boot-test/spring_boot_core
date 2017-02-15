@@ -9,7 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class User implements Serializable, UserDetails{
+public class OpenUser implements Serializable, UserDetails{
 	/**
 	 * 
 	 */
@@ -19,11 +19,11 @@ public class User implements Serializable, UserDetails{
     private String password;
     private String role;
     //openid user
-    public User(String string, String string2, List<GrantedAuthority> list){
+    public OpenUser(String string, String string2, List<GrantedAuthority> list){
     	
     }
 
-    public User(String username, String password, String  role){
+    public OpenUser(String username, String password, String  role){
 
         this.setUsername(username);
         this.setPassword(password);
