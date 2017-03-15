@@ -48,7 +48,6 @@ public class BaseAplication extends SpringBootServletInitializer implements Embe
 	/**
 	 * Url重构   (接口可用于tomcat调优)
 	 */
-	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
 		try {
 			IniUtil iniUtil = new IniUtil();

@@ -63,31 +63,26 @@ public class OpenUser implements Serializable, UserDetails{
 		this.role = role;
 	}
 
-	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
 		return Arrays.asList(new SimpleGrantedAuthority(getRole()));
 	}
 
-	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
 		return true;

@@ -10,7 +10,6 @@ import com.hubert.core.security.dto.User;
 @Service
 public class UserService implements UserDetailsService{
 
-	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		//通过数据库查询用户信息权限  --or-- http请求去用户权限系统获取用户信息和权限
 		User user = null; 

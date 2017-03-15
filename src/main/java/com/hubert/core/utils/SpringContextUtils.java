@@ -4,19 +4,21 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 /**
  * 实现ApplicationContextAware接口--直接获取springContext中，所有引用到的bean对象
  * @author Hubrt
  *
  */
+@Component   //装载到ioc容器
 public class SpringContextUtils implements ApplicationContextAware{
 	
 	private static ApplicationContext applicationContext = null;
 	
 	/**
 	 * 注入 springContext   用于获取context中的bean
+	 * 当继承了ApplicationContextAware类之后，那么程序在调用 getBean(String)的时候会自动调用该方法，不用自己操作
 	 */
-	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		SpringContextUtils.applicationContext = applicationContext;
 	}

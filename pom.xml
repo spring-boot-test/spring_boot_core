@@ -151,15 +151,46 @@
 			<artifactId>spring-security-ldap</artifactId>
 		</dependency>
 
+		<!-- redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-redis</artifactId>
+		</dependency>
+
+
+		<!-- 支持 @ConfigurationProperties 注解 <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-configuration-processor</artifactId> <optional>true</optional> 
+			</dependency> -->
+
+		<!-- redis -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
 
 
 	</dependencies>
 
-	<!-- 打包到 置地maven 私服 <distributionManagement> <repository> <id>crland.maven.rep</id> 
-		<name>Crland Releases Repository</name> <url>http://10.72.1.137:8081/nexus/content/repositories/releases/</url> 
-		</repository> <snapshotRepository> <id>crland.maven.rep</id> <name>Crland 
-		Snapshot Repository</name> <url>http://10.72.1.137:8081/nexus/content/repositories/snapshots/</url> 
-		</snapshotRepository> </distributionManagement> -->
+	<!-- 打包到 置地maven 私服
+	<distributionManagement> 
+	<repository>
+		<id>crland.maven.rep</id>
+		<name>Crland Releases Repository</name>
+		<url>http://10.72.1.137:8081/nexus/content/repositories/releases/</url>
+	</repository>
+	<snapshotRepository>
+		<id>crland.maven.rep</id>
+		<name>Crland
+			Snapshot Repository</name>
+		<url>http://10.72.1.137:8081/nexus/content/repositories/snapshots/</url>
+	</snapshotRepository>
+</distributionManagement>
+-->
 	<build>
 		<resources>
 			<resource>
